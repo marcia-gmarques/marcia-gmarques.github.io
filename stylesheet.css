@@ -75,8 +75,13 @@ body {
     margin-top: -56px; /* recentres the heading by decreasing height of navbar */
 }
 
+@font-face {
+    font-family: felix;
+    src: url(graphics/Felix\ Titling.ttf);
+  }
+
 .headingHome{
-    font-family: 'Felix Titling', Afronaut, Blenny, Futura !important; 
+    font-family: felix, Afronaut, Blenny, Futura !important; 
     text-align: left !important;
     letter-spacing: 0.1rem !important;
     color: #ebe1d3 !important;
@@ -84,7 +89,7 @@ body {
 }
 
 .headingHomePortfolio{
-    font-family: 'Felix Titling', Afronaut, Blenny, Futura !important; 
+    font-family: felix, Afronaut, Blenny, Futura !important; 
     text-align: left !important;
     letter-spacing: 0.39vw !important;
     color: #ebe1d3 !important;
@@ -183,7 +188,7 @@ body {
     text-align: left;
     margin-bottom: 0;
     margin-top: 2%;
-    font-family: 'Felix Titling', Afronaut, Blenny, Futura !important; 
+    font-family: felix, Afronaut, Blenny, Futura !important; 
     letter-spacing: 0.5vw;
     color: #ebe1d3;
     text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
