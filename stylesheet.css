@@ -132,12 +132,27 @@ body {
 }
 
 .body-bg-img{
-    background-color: rgba(0,0,0,0.85) !important;
     background-image: url(photos/profile.jpeg);
     background-size: cover;
     background-position: center;
     
 }
+
+.body-bg-img::after {
+    content: "";
+    background: rgba(0,0,0,0.85) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.body-bg-img > * {
+    z-index: 10;
+}
+
 
 
 /*--------------------------360 and film stuff-----------------------------------------------*/
