@@ -1,14 +1,15 @@
-# marcia-gmarques.github.io
+# Portfolio Web Page
+### marcia-gmarques.github.io 
 
-## Portfolio Web Page
 
-# Technology:
+
+## Technology:
 - HTML
 - Bootstrap (to make it responsive and mobile friendly)
 - CSS
 - Javascript
 
-# Includes:
+## Includes:
 - Homepage
 - Film section with embeded Youtube links
 - Photography with Gallery section
