@@ -10,6 +10,10 @@
     color: black !important;
 }
 
+.navbar-transparent{
+    background-color: transparent !important;
+}
+
 .navbar-dark .nav-link{
     color: #ebe1d3 !important;
     font-family: Bahnschrift, Futura, Arial !important;
@@ -23,6 +27,9 @@
 .navbar-brand{
     font-family: Afronaut, Blenny, Futura !important; 
     margin-right: 7%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .navbar-dark .navbar-brand{
@@ -35,6 +42,9 @@
     text-decoration-thickness: 10%; 
   }
 
+
+
+
 /*----------------------Footer Light and Dark---------------------*/
 .footer-light{
     background-color: #ebe1d3 !important;
@@ -44,6 +54,10 @@
 .footer-dark{
     background-color: black !important;
     padding-bottom: 1.5vh;
+}
+
+.footer-transparent{
+    background-color: transparent !important;
 }
 
 
@@ -69,7 +83,7 @@ body {
 
 /*----------------------------Index stuff--------------------------------------------*/
 #section1 {
-    background-color: black !important;
+    background-color: rgba(0,0,0,0.85) !important;
     min-height: 100vh; 
     position: relative;
     margin-top: -56px; /* recentres the heading by decreasing height of navbar */
@@ -85,6 +99,9 @@ body {
     text-align: left !important;
     letter-spacing: 0.1rem !important;
     color: #ebe1d3 !important;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     
 }
 
@@ -95,6 +112,9 @@ body {
     color: #ebe1d3 !important;
     justify-content: center !important;
     text-align: center !important;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 
@@ -110,6 +130,13 @@ body {
     justify-content: center !important;
     padding-left: 5%;
     padding-right: 5%;
+}
+
+.body-bg-img{
+    background-image: url(photos/profile.jpeg);
+    background-size: cover;
+    background-position: center;
+    
 }
 
 
@@ -162,6 +189,13 @@ body {
     font-size: 3vh;
 }
 
+.link-black{
+    color: black;
+}
+
+.link-black:hover{
+    color: black;
+}
 
 /*--------------------------photography stuff-----------------------------------------------*/
 .headingPhotography{
@@ -301,7 +335,16 @@ body {
     color:#ebe1d3 !important;
 }
 
+.text-github {
+    text-align: center;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-bottom: 5vh;
+}
 
+.text-github, a:hover, a {
+color:#ebe1d3;
+}
 
 
 /*--------------------------About SECTION-----------------------------------------------*/
@@ -328,6 +371,7 @@ body {
         overflow-x: hidden  !important;
         flex: 0 0 50%;
       }
+
 }
 
 @keyframes animateRight {
@@ -375,6 +419,12 @@ body {
         padding-bottom: 4vh;
         font-size: 5vw;
     }
+
+    .body-bg-img{
+        background-image: url(photos/profile.jpeg);
+        background-size: cover;
+        background-position: -20vw;
+    }
 } 
   
 
@@ -416,7 +466,16 @@ body {
         padding-bottom: 4vh;
         font-size: 5vw;
     }
+
+    .body-bg-img{
+        background-image: url(photos/profile.jpeg);
+        background-size: cover;
+        background-position: -35vw;
+    }
 } 
+
+
+
 
   /* x-small screens like iphones*/
   @media (max-width: 400px) {
@@ -454,6 +513,12 @@ body {
         padding-top: 3vh;
         padding-bottom: 4vh;
         font-size: 5vw;
+    }
+
+    .body-bg-img{
+        background-image: url(photos/profile.jpeg);
+        background-size: cover;
+        background-position: -35vw;
     }
 } 
 
