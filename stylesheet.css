@@ -1,65 +1,94 @@
-
 /*----------------------Nav Bar Light and Dark---------------------*/
-.navbar-dark{
+.navbar-dark {
     background-color: black !important;
     color: #ebe1d3 !important;
 }
 
-.navbar-light{
+.navbar-light {
     background-color: #ebe1d3 !important;
     color: black !important;
 }
 
-.navbar-transparent{
+.navbar-transparent {
     background-color: transparent !important;
     color: #ebe1d3 !important;
-    /* z-index: 10; */
 }
 
-.navbar-dark .nav-link{
+.navbar-dark .nav-link {
     color: #ebe1d3 !important;
     font-family: Bahnschrift, Futura, Arial !important;
+    padding-bottom: 4px; 
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    text-decoration: none; /* Start without underline */
+    position: relative;
 }
 
-.navbar-light .nav-link{
+.navbar-light .nav-link {
     color: black !important;
     font-family: Bahnschrift, Futura, Arial !important;
+    padding-bottom: 4px; 
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    text-decoration: none; /* Start without underline */
+    position: relative;
 }
 
-.navbar-brand{
+/* Underline on hover only on text with transition */
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link.active,
+.navbar-light .nav-link:hover, .navbar-light .nav-link.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Adjust thickness as needed */
+    text-decoration-color: currentColor; /* Use the current color for underline */
+    text-underline-offset: 4px; /* Offset the underline slightly from the text */
+    transition: text-decoration-color 0.3s ease-in-out, text-underline-offset 0.3s ease-in-out; /* Transition effect */
+}
+
+
+.navbar-brand {
     font-family: Afronaut, Blenny, Futura !important; 
     margin-right: 7%;
-/*     -webkit-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none;  */ 
-}
-
-.navbar-dark .navbar-brand{
-    color: #ebe1d3;
 }
 
 
 .active {
     text-decoration: underline;
-    text-decoration-thickness: 10%; 
-  }
-
+    text-decoration-thickness: 2px; /* Match thickness for consistency */
+    text-underline-offset: 4px; /* Offset to keep consistent with hover */
+}
 
 
 
 /*----------------------Footer Light and Dark---------------------*/
-.footer-light{
+.footer-light {
     background-color: #ebe1d3 !important;
     padding-bottom: 1.5vh;
 }
 
-.footer-dark{
+.footer-dark {
     background-color: black !important;
     padding-bottom: 1.5vh;
 }
 
-.footer-transparent{
+.footer-transparent {
     background-color: transparent !important;
+}
+
+.footer-dark .col-auto a svg,
+.footer-light .col-auto a svg,
+.footer-transparent .col-auto a svg {
+    transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out; 
+}
+
+.footer-dark .col-auto a:hover svg,
+.footer-light .col-auto a:hover svg,
+.footer-transparent .col-auto a:hover svg {
+    transform: scale(1.4); 
+    margin: 0 0.6em;  /* Added margin on hover to prevent overlap, adjust as needed */
+}
+
+.footer-dark .col-auto,
+.footer-light .col-auto,
+.footer-transparent .col-auto {
+    display: inline-block; /* Ensure elements stay inline */
 }
 
 
@@ -82,6 +111,57 @@ body {
     padding: 0%;
 }
 
+
+
+
+
+/*----------------------Buttons Light and Dark---------------------*/
+
+.btn-outline-secondary{
+    color: black;
+    background-color: transparent;
+    border-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-secondary:hover{
+    color: black;
+    background-color: transparent;
+    border-color: black;
+    transform: scale(1.2);
+    margin-right: 1rem; /* adds right margin to avoid overlap */
+    margin-left: 1rem;
+}
+
+/* what happens on click */
+.btn-outline-secondary:active{
+    color: #ebe1d3 !important;
+    background-color: black !important;
+    border-color: black !important;
+}
+
+.btn-primary{
+    color: #ebe1d3;
+    background-color: black;
+    border-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover{
+    color: #ebe1d3;
+    background-color: black;
+    border-color: black;
+    transform: scale(1.2);
+    margin-left: 1rem; /* adds left margin to avoid overlap */
+    margin-right: 1rem;
+}
+
+
+.btn-primary:active{
+    color: #ebe1d3 !important;
+    background-color: grey !important;
+    border-color: grey !important;
+}
 
 /*----------------------------Index stuff--------------------------------------------*/
 #section1 {
