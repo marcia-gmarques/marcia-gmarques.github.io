@@ -113,3 +113,61 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', checkScreenSize);
 });
   
+
+
+
+
+
+
+
+
+
+// Function to initialize navigation buttons based on the current project
+function initializeProjectNavigation() {
+  // Define an array with the order of project links as they appear on the digital design page
+  // Add here the additional project html pages I wanna add in the future, so order remains
+  const projectLinks = [
+      'blijdorp-ad.html',
+      'blijdorp-illustrations.html',
+      'yields.html',
+      'dcsa.html',
+      'ekwos-brand.html',
+      'ekwos-posters.html',
+      'freelance-posters.html',
+      'freelance-web.html'
+  ];
+
+  // Get the current URL to find the current project's position
+  const currentUrl = window.location.pathname.split('/').pop(); // Gets the current page filename
+  const currentIndex = projectLinks.indexOf(currentUrl); // Find the index of the current project
+
+  // Get button elements
+  const lastButton = document.getElementById('last-project');
+  const nextButton = document.getElementById('next-project');
+
+  // Hide 'Last Project' button if it's the first project
+  if (currentIndex === 0) {
+      lastButton.style.display = 'none';
+  } else {
+      lastButton.style.display = 'inline-block';
+      lastButton.onclick = function() {
+          window.location.href = projectLinks[currentIndex - 1]; // Navigate to the previous project
+      };
+  }
+
+  // Hide 'Next Project' button if it's the last project
+  if (currentIndex === projectLinks.length - 1) {
+      nextButton.style.display = 'none';
+  } else {
+      nextButton.style.display = 'inline-block';
+      nextButton.onclick = function() {
+          window.location.href = projectLinks[currentIndex + 1]; // Navigate to the next project
+      };
+  }
+}
+
+// Initialize navigation on page load
+window.onload = initializeProjectNavigation;
+
+
+
