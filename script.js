@@ -8,11 +8,40 @@
 
   // Add an event listener to track when the video is loaded
   video.on('loadeddata', function() {
-    $(this).addClass('loaded'); // Mark the video as loaded
-    $('.body-bg-img').css('background-image', 'none'); // Remove the body background image once the video is loaded
+    $(this).addClass('loaded'); 
+    $('.body-bg-img').css('background-image', 'none'); 
   });
 }); 
 
+
+/*For cursor on index page to change*/
+document.addEventListener('DOMContentLoaded', function () {
+  const centredDiv = document.querySelector('.centred-div');
+  const customCursor = document.createElement('div');
+  customCursor.classList.add('custom-cursor');
+  customCursor.innerText = 'Explore';
+  document.body.appendChild(customCursor);
+
+  centredDiv.addEventListener('mouseenter', () => {
+      customCursor.style.visibility = 'visible';
+      customCursor.style.opacity = '1';
+  });
+
+  centredDiv.addEventListener('mouseleave', () => {
+      customCursor.style.visibility = 'hidden';
+      customCursor.style.opacity = '0';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+      customCursor.style.left = `${e.clientX}px`;
+      customCursor.style.top = `${e.clientY}px`;
+  });
+
+  // Add click event to navigate to digitaldesign.html
+  centredDiv.addEventListener('click', () => {
+    window.location.href = 'digitaldesign.html';
+});
+});
 
 
 
@@ -36,7 +65,7 @@ window.addEventListener('DOMContentLoaded', function() {
   
     updateClass(); // Call the function initially
   
-    window.addEventListener('resize', updateClass); // Call the function on window resize
+    window.addEventListener('resize', updateClass); 
 });
   
 
@@ -84,7 +113,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // Loop through each link and check if the current page URL contains the link's href
     navLinks.forEach(function(link) {
       if (currentPageUrl.includes(link.href)) {
-        link.classList.add('active');  // Add the 'active' class to the current link
+        link.classList.add('active');  
       }
     });
 });
@@ -115,16 +144,8 @@ window.addEventListener('DOMContentLoaded', () => {
   
 
 
-
-
-
-
-
-
-
 // Function to initialize navigation buttons based on the current project
 function initializeProjectNavigation() {
-  // Define an array with the order of project links as they appear on the digital design page
   // Add here the additional project html pages I wanna add in the future, so order remains
   const projectLinks = [
       'blijdorp-ad.html',
@@ -138,8 +159,8 @@ function initializeProjectNavigation() {
   ];
 
   // Get the current URL to find the current project's position
-  const currentUrl = window.location.pathname.split('/').pop(); // Gets the current page filename
-  const currentIndex = projectLinks.indexOf(currentUrl); // Find the index of the current project
+  const currentUrl = window.location.pathname.split('/').pop(); 
+  const currentIndex = projectLinks.indexOf(currentUrl); 
 
   // Get button elements
   const lastButton = document.getElementById('last-project');
@@ -151,7 +172,7 @@ function initializeProjectNavigation() {
   } else {
       lastButton.style.display = 'inline-block';
       lastButton.onclick = function() {
-          window.location.href = projectLinks[currentIndex - 1]; // Navigate to the previous project
+          window.location.href = projectLinks[currentIndex - 1];
       };
   }
 
@@ -161,7 +182,7 @@ function initializeProjectNavigation() {
   } else {
       nextButton.style.display = 'inline-block';
       nextButton.onclick = function() {
-          window.location.href = projectLinks[currentIndex + 1]; // Navigate to the next project
+          window.location.href = projectLinks[currentIndex + 1]; 
       };
   }
 }
