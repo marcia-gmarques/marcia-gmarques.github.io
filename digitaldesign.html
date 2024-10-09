@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="icon" href="graphics/SVG/Artboard 5.svg">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <title>Digital Design - Márcia Marques Portfolio</title>
 </head>
@@ -55,9 +57,22 @@
         </div>
       </div>
 
+      <!--filter buttons-->
+      <!-- <div class="container mb-4">
+        <div class="filter-buttons text-center">
+          <button class="btn btn-secondary filter-btn" data-filter="all">Show All</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="illustration">Illustration</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="web-design">Web Design</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="brand-design">Brand Design</button>
+          <button class="btn btn-outline-secondary filter-btn" data-filter="digital-design">Digital Design</button>
+        </div>
+      </div> -->
+      
+
+
       <!--1st row with cards-->
       <div class="row px-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="digital-design">
           <div class="card shadow p-2 bg-body rounded">
               <a href="blijdorp-ad.html"><img class="card-image-top img-fluid rounded" src="mockups/onderwater-mockupv2.jpg" alt="key visual for blijdorp's underwater campaign"></a>  
               <div class="card-body" style="text-align: center;">
@@ -71,7 +86,7 @@
           </div>
         </div>  
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="illustration">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="blijdorp-illustrations.html"><img class="card-image-top img-fluid rounded" src="graphics/blijdorp/theater-backdrop.jpg" alt="illustration of animals in the jungle"></a>  
             <div class="card-body" style="text-align: center;">
@@ -90,7 +105,7 @@
 
       <!--2nd row with cards-->
       <div class="row px-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="brand-design">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="yields.html"><img class="card-image-top img-fluid rounded" src="graphics/yields/yields-logo.jpg" alt="logotype for Yields"></a>  
             <div class="card-body" style="text-align: center;">
@@ -104,7 +119,7 @@
           </div>
         </div>  
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="digital-design illustration">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="dcsa.html"><img class="card-image-top img-fluid rounded" src="mockups/dcsa-booklet-mockup.jpg" alt="dcsa booklet mockup"></a>  
             <div class="card-body" style="text-align: center;">
@@ -121,7 +136,7 @@
 
       <!--3rd row with cards-->
       <div class="row px-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="brand-design">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="ekwos-brand.html"><img class="card-image-top img-fluid rounded" src="graphics/ekwos-logo.jpg" alt="logotype for EKWOSJM"></a>  
             <div class="card-body" style="text-align: center;">
@@ -136,7 +151,7 @@
           </div>
         </div>  
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="digital-design">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="ekwos-posters.html"><img class="card-image-top img-fluid rounded" src="mockups/ekwos-mockup.jpg" alt="horse riding competition posters"></a>  
             <div class="card-body" style="text-align: center;">
@@ -154,7 +169,7 @@
 
       <!--4th row with cards-->
       <div class="row px-5">
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="illustration">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="freelance-posters.html"><img class="card-image-top img-fluid rounded" src="graphics/shirt_illustration.jpg" alt="t-shirt illustration"></a>  
             <div class="card-body" style="text-align: center;">
@@ -168,7 +183,7 @@
           </div>
         </div>  
 
-        <div class="col-lg-6">
+        <div class="col-lg-6" data-category="web-design">
           <div class="card shadow p-2 mb-5 bg-body rounded">
             <a href="freelance-web.html"><img class="card-image-top img-fluid rounded" src="mockups/website-mockup1.jpg" alt="screenshot of personal website"></a>  
             <div class="card-body" style="text-align: center;">
@@ -182,6 +197,10 @@
           </div>
         </div>
       </div>  
+
+    <!--space for the last cards to expand-->  
+    </br></br></br>
+
 
     </div>
       
@@ -230,5 +249,6 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
 </body>
 </html>    
