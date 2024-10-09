@@ -98,7 +98,6 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     background-color: #ebe1d3 !important; /* Initial background color */
-    /* overflow: hidden; Prevents scrolling */
 }
 
 .bodyBlack{
@@ -108,10 +107,8 @@ body {
 }
 
 .container{
-    padding: 0%;
+    padding: 0%; 
 }
-
-
 
 
 
@@ -159,8 +156,8 @@ body {
 
 .btn-primary:active{
     color: #ebe1d3 !important;
-    background-color: grey !important;
-    border-color: grey !important;
+    background-color: #777b7e !important;
+    border-color: #777b7e !important;
 }
 
 /*----------------------------Index stuff--------------------------------------------*/
