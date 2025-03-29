@@ -15,16 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /* Track */
         ::-webkit-scrollbar-track {
-          background: #ebe1d3; 
+          background: #000000;
         }
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-          background: #000000;   
-          border: 0.2vw solid #ebe1d3; 
-          box-sizing: border-box;      
+          background: #ebe1d3;
+          border: 0.2vw solid #000000; 
+          box-sizing: border-box; 
         }
-
       `;
     } else {
       style.innerHTML = `
@@ -35,15 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         /* Track */
         ::-webkit-scrollbar-track {
-          background: #000000;
+          background: #ebe1d3; 
         }
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-          background: #ebe1d3;
-          border: 0.2vw solid #000000; 
-          box-sizing: border-box; 
+          background: #000000;   
+          border: 0.2vw solid #ebe1d3; 
+          box-sizing: border-box;      
         }
+
       `;
     }
   }
@@ -218,7 +218,8 @@ function initializeProjectNavigation() {
       'ekwos-brand.html',
       'ekwos-posters.html',
       'freelance-posters.html',
-      'freelance-web.html'
+      'freelance-web.html', 
+      'printcil.html',
   ];
 
   // Get the current URL to find the current project's position
