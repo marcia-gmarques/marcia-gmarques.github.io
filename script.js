@@ -211,6 +211,8 @@ window.addEventListener('DOMContentLoaded', () => {
 function initializeProjectNavigation() {
   // Add here the additional project html pages I wanna add in the future, so order remains
   const projectLinks = [
+      'ratisbonaflow.html',
+      'printcil.html',
       'blijdorp-ad.html',
       'blijdorp-illustrations.html',
       'yields.html',
@@ -218,8 +220,7 @@ function initializeProjectNavigation() {
       'ekwos-brand.html',
       'ekwos-posters.html',
       'freelance-posters.html',
-      'freelance-web.html', 
-      'printcil.html',
+      'freelance-web.html'
   ];
 
   // Get the current URL to find the current project's position
